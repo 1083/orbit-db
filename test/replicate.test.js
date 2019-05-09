@@ -72,7 +72,7 @@ Object.keys(testAPIs).forEach(API => {
           write: [
             orbitdb1.identity.id,
             orbitdb2.identity.id
-          ],
+          ]
         }
       }
 
@@ -297,7 +297,7 @@ Object.keys(testAPIs).forEach(API => {
           try {
             // Test the replicator state
             assert.equal(db2._loader.tasksRequested >= db2.replicationStatus.progress, true)
-            assert.equal(db2.options.referenceCount, 64)
+            assert.equal(db2.options.referenceCount, 32)
             assert.equal(db2._loader.tasksRunning, 0)
           } catch (e) {
             reject(e)
